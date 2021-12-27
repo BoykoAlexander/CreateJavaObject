@@ -6,9 +6,19 @@ public class Cars {
   int speed;
   int time;
 
-  int carDistance() {
+
+  int getCarDistance() {
 
     return (speed * time) / 100;
 
   }
+
+  void getInfoMarkCar() {
+
+    System.out.println("Авто марки: " + markaAuto);
+    System.out.println("За " + time + " мин, " + "со скоростью: " + speed + "km/h");
+
+  }
+
+
 }

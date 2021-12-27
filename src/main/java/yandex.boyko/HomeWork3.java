@@ -7,29 +7,33 @@ public class HomeWork3 {
     Cars sportCar = new Cars();
     Cars cityCar = new Cars();
     City city = new City();
-
-    int speed1, speed2;
+    City joke = new City();
 
 
     sportCar.markaAuto = "mercedes";
     sportCar.speed = 120;
     sportCar.time = 60;
 
-    cityCar.markaAuto = "minivan";
+
+    cityCar.markaAuto = "Lada";
     cityCar.speed = 80;
     cityCar.time = 60;
 
     city.cityName = "Москва";
     city.country = "Россия";
+    joke.cityName = "Москвы";
 
+    city.getInfoCountyAndCity();
+    sportCar.getInfoMarkCar();
+    System.out.println("Проезжает расстояние в: " + sportCar.getCarDistance() + "km");
 
+    System.out.println("\nТогда как");
 
-    speed1 = sportCar.carDistance();
-    System.out.println("Автомобиль марки " + sportCar.markaAuto + " проезжает расстояние " + speed1 + " километра" + " за " +
-            sportCar.time + " мин" + " в городе: " + city.cityName + " , " +  city.country);
+    city.getInfoCountyAndCity();
+    cityCar.getInfoMarkCar();
+    System.out.println("Проезжает расстояние в: " + cityCar.getCarDistance() + "km");
+    System.out.println("--------------------------------------");
 
-    speed2 = cityCar.carDistance();
-    System.out.println("Автомобиль марки " + cityCar.markaAuto + " проезжает расстояние " + speed2 + " километра" + " за " +
-            cityCar.time + " мин" + " в городе: " + city.cityName + " , " +  city.country);
+    joke.joke();
   }
 }
